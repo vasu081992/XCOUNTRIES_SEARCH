@@ -23,36 +23,28 @@ const [debouncetext,setdebouncetext] = useState("")
 const [searchcountries,setsearchcountries] = useState([])
 
 const debounceSearch =(e,debouncetext)=>{
-
+ 
     if(debouncetext){
         clearTimeout(debouncetext)
         console.log("timeout cleared now",debouncetext)
     }
-const searchText = e.target.value;
-setsearchText(e.target.value)
+    setsearchText(e.target.value)
 
+console.log("react re rendering again!")
 let timer = setTimeout(()=>{
-
+  
     console.log("inside time out",countries)
     console.log("inside time out",searchText)
   let filteredItems = countries.filter((country)=>country.name.common.toLowerCase().includes(searchText.toLowerCase()))
+  
   setsearchcountries(filteredItems)
 console.log("timer",timer)
-},500)
-
+},2000)
 setdebouncetext(timer)
+
 }
 
-useEffect(()=>{
-let timer;
-    if(timer){
-        clearTimeout(timer)
-        console.log("timeout cleared now")
-    }
-    
 
-
-},[searchText])
 
 const countriesFetch = async()=>{
 
