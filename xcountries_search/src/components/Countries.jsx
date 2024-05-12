@@ -1,11 +1,12 @@
 import React, { useEffect,useState,useRef } from "react"
 import styles from "./Countries.module.css"
+import "./Countries.css"
 
 const Card = ({country})=>{
 
     return(
 
-        <div className={styles.countryCard}>
+        <div className="countryCard">
         <img src={country.flags.png} className={styles.flag} alt={country.name.common}/>
         <p className={styles.title}>{country.name.common}</p>
         </div>
