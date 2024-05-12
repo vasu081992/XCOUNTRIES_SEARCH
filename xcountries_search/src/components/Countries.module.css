@@ -1,0 +1,35 @@
+.countryCard{
+    height:150px;
+    width:200px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;  
+    margin-left: 10px;
+    margin-top: 20px; 
+}
+
+.flag{
+    width:150px;
+    height:70px;
+    padding:10px;
+    object-fit: contain;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.search{
+    width:400px;
+    padding:10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
